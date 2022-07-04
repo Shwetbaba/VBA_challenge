@@ -140,30 +140,26 @@ Sub Loop_Solved()
              
                 Total_Ticker_Volume = Total_Ticker_Volume + CurrentWs.Cells(i, 7).Value
             End If
-      
-      
-      
             
+            
+     Next i
+      
                 CurrentWs.Range("Q2").Value = (CStr(MAX_PERCENT) & "%")
                 CurrentWs.Range("Q3").Value = (CStr(MIN_PERCENT) & "%")
                 CurrentWs.Range("P2").Value = MAX_TICKER_NAME
                 CurrentWs.Range("P3").Value = MIN_TICKER_NAME
                 CurrentWs.Range("Q4").Value = MAX_VOLUME
                 CurrentWs.Range("P4").Value = MAX_VOLUME_TICKER
-                
-      
-            
-            CurrentWs.Range("I1:Q1").Font.Name = "Arial"
-            CurrentWs.Range("I1:Q1").Font.Size = "16"
-            CurrentWs.Range("I1:Q1").Font.Bold = "True"
-            CurrentWs.Range("I1:Q1").EntireColumn.HorizontalAlignment = xlCenter
-            CurrentWs.Range("I1:Q1").EntireColumn.AutoFit
-            
-        Next i
 
-
+            
+                CurrentWs.Range("I1:Q1").Font.Name = "Arial"
+                CurrentWs.Range("I1:Q1").Font.Size = "16"
+                CurrentWs.Range("I1:Q1").Font.Bold = "True"
+                CurrentWs.Range("I1:Q1").EntireColumn.HorizontalAlignment = xlCenter
+                CurrentWs.Range("I1:Q1").EntireColumn.AutoFit
+            
      Next CurrentWs
      
-     'reference : https://freesoft.dev/program/163047389
-
+      'reference : https://freesoft.dev/program/163047389
+      
 End Sub
